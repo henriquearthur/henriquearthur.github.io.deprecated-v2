@@ -1,0 +1,66 @@
+/**
+ * cms
+ * by Henrique Arthur <eu@henriquearthur.me>
+ *
+ * Main style
+ */
+
+@import '../bourbon/bourbon';
+$output-bourbon-deprecation-warnings: false;
+
+@import 'components/core';
+@import 'components/reset';
+
+/* ******************************************* */
+
+@import '../bower_components/bulma/sass/utilities/initial-variables';
+$family-sans-serif: 'Overpass', -apple-system,system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$family-primary: $family-sans-serif;
+$red: #ed1c24;
+$primary: $red;
+
+@import '../bower_components/bulma/bulma';
+
+/* ******************************************* */
+$fontLight: 300;
+$fontRegular: 400;
+$fontSemibold: 600;
+$widthContent: 960px;
+
+/* ******************************************* */
+
+@import 'components/classes';
+
+/* ******************************************* */
+
+.bg-circle {
+    background-image: url(../images/bg-circles.png);
+}
+
+.tab-container {
+    display: none;
+    &.is-active {
+        display: block;
+    }
+}
+
+.avatar-image {
+    border-radius: 100px;
+    background-image: url(/avatar.png);
+    background-size: cover;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    width: 100px;
+    height: 100px;
+}
+
+a.link {
+    color: $primary;
+    &:hover {
+        color: darken($primary, 10%);
+    }
+}
+
+.project-img {
+    object-fit: cover;
+}

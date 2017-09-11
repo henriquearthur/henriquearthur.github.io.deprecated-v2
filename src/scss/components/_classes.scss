@@ -1,0 +1,128 @@
+/**
+ * by Henrique Arthur <eu@henriquearthur.me>
+ *
+ * Functional classes
+ */
+
+.cf {
+    zoom: 1;
+}
+
+.cf:before,
+.cf:after {
+    display: table;
+    content: '';
+}
+
+.cf:after {
+    clear: both;
+}
+
+.clear {
+    clear: both;
+}
+
+/**
+ * Below code comes from tableless.com.br
+ * https://github.com/tableless/css-functional-classes
+ */
+
+/* Float */
+.noFloat {
+    float: none;
+}
+.fRight {
+    float: right;
+}
+.fLeft {
+    float: left;
+}
+
+/* Display */
+.dBlock {
+    display: block;
+}
+.dInline {
+    display: inline;
+    float: none;
+}
+.dInlineBlock {
+    display: inline-block;
+    float: none;
+}
+.dNone {
+    display: none;
+}
+
+.hideAccessible {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* Opacity */
+.opacityZero {
+    opacity: 0;
+}
+
+/* No margin and no padding */
+.noMargin {
+    margin: 0;
+}
+.noMarginLeft {
+    margin-left: 0;
+}
+.noMarginRight {
+    margin-right: 0;
+}
+.noMarginTop {
+    margin-top: 0;
+}
+.noMarginBottom {
+    margin-bottom: 0;
+}
+
+.noPadding {
+    padding: 0;
+}
+.noPaddingLeft {
+    padding-left: 0;
+}
+.noPaddingRight {
+    padding-right: 0;
+}
+.noPaddingTop {
+    padding-top: 0;
+}
+.noPaddingBottom {
+    padding-bottom: 0;
+}
+
+/* Cursor */
+.cursorPointer {
+    cursor: pointer;
+}
+.cursorDefault {
+    cursor: default;
+}
+.cursorCrosshair {
+    cursor: crosshair;
+}
+.cursorMove {
+    cursor: move;
+}
+.cursorHelp {
+    cursor: help;
+}
+.cursorWait {
+    cursor: wait;
+}
+.cursorInherit {
+    cursor: inherit;
+}
+.cursorText {
+    cursor: text;
+}
+.cursorProgress {
+    cursor: progress;
+}

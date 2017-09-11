@@ -1,0 +1,23 @@
+{
+  "name": "hnrq",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Henrique Arthur <eu@henriquearthur.me>"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bulma": "^0.5.1",
+    "font-awesome": "^4.7.0",
+    "lightbox2": "^2.9.0",
+    "jquery": "^3.2.1"
+  }
+}
