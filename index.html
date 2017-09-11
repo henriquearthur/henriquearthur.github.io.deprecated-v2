@@ -39,7 +39,7 @@
             }
         });
     </script>
-    
+
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({
@@ -357,12 +357,14 @@
 
             <br>
 
-            <form action="#">
+            <form id="contact-form">
+                <div id="contact-form-message"></div>
+
                 <div class="field">
                     <label class="label">Nome</label>
 
                     <div class="control">
-                        <input class="input" type="text" name="name" placeholder="Qual é o seu nome?" required>
+                        <input class="input" id="cf-name" type="text" name="name" placeholder="Qual é o seu nome?" required>
                     </div>
                 </div>
 
@@ -370,7 +372,7 @@
                     <label class="label">E-mail</label>
 
                     <div class="control">
-                        <input class="input" type="email" name="email" placeholder="Qual é o seu e-mail?" required>
+                        <input class="input" id="cf-email" type="email" name="email" placeholder="Qual é o seu e-mail?" required>
                     </div>
                 </div>
 
@@ -378,7 +380,7 @@
                     <label class="label">Mensagem</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="message" placeholder="Se deseja um orçamento para um projeto, descreva-o o máximo possível"></textarea>
+                        <textarea class="textarea" id="cf-message" name="message" placeholder="Se deseja um orçamento para um projeto, descreva-o o máximo possível"></textarea>
                     </div>
                 </div>
 

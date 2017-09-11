@@ -46,6 +46,45 @@
 
         $(".navbar-burger").click();
     });
+
+    $("#contact-form").on('submit', function(e) {
+        e.preventDefault();
+
+        var form = $(this);
+
+        if (form.hasClass('disabled')) {
+            return false;
+        }
+
+        form.addClass('disabled').animate({'opacity': 0.5}, 'fast');
+
+        var name = $("#cf-name").val();
+        var email = $("#cf-email").val();
+        var message = $("#cf-message").val();
+
+        $.ajax({
+            url: "https://docs.google.com/forms/d/e/1FAIpQLSc0FMxUpg-wgMf-FoDZ0HePSwg0yD9YTaRIzNoNiP5rpLSnNg/formResponse",
+            data: {"entry.414585514" : name, "entry.1416397509" : email, "entry.1272364480": message},
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+                0: function (){
+                    form.removeClass('disabled').animate({'opacity': 1}, 'fast');
+
+                    $("#contact-form-message").html('<article class="message is-success"><div class="message-header"><p>Enviado!</p></div><div class="message-body">Mensagem enviada. Responderei você assim que possível :)</div></article><br>');
+
+                    $("#cf-name, #cf-email, #cf-message").val('');
+                },
+                200: function (){
+                    form.removeClass('disabled').animate({'opacity': 1}, 'fast');
+
+                    $("#contact-form-message").html('<article class="message is-success"><div class="message-header"><p>Enviado!</p></div><div class="message-body">Mensagem enviada. Responderei você assim que possível :)</div></article><br>');
+
+                    $("#cf-name, #cf-email, #cf-message").val('');
+                }
+            }
+        });
+    });
 });
 
 //# sourceMappingURL=app.js.map
